@@ -32,16 +32,8 @@ public class MainActivity extends FragmentActivity implements
 		// Set up the action bar to show a dropdown list.
 		final ActionBar actionBar = getActionBar();
 		actionBar.setDisplayShowTitleEnabled(true);
-		actionBar.setNavigationMode(ActionBar.DISPLAY_SHOW_TITLE); //   .NAVIGATION_MODE_LIST
+		actionBar.setNavigationMode(ActionBar.DISPLAY_SHOW_TITLE); 
 
-//		// Set up the dropdown list navigation in the action bar.
-//		actionBar.setListNavigationCallbacks(
-//		// Specify a SpinnerAdapter to populate the dropdown list.
-//				new ArrayAdapter<String>(actionBar.getThemedContext(),
-//						android.R.layout.simple_list_item_1,
-//						android.R.id.text1, new String[] {
-//								getString(R.string.title_section1),
-//								getString(R.string.title_section2), }), this);
 	}
  
 	@Override
@@ -65,46 +57,6 @@ public class MainActivity extends FragmentActivity implements
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
-	}
-
-	@Override
-	public boolean onNavigationItemSelected(int position, long id) {
-		// When the given dropdown item is selected, show its contents in the
-		// container view.
-		Fragment fragment = new DummySectionFragment();
-		Bundle args = new Bundle();
-		args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-		fragment.setArguments(args);
-		getSupportFragmentManager().beginTransaction()
-				.replace(R.id.container, fragment).commit();
-		return true;
-	}
-
-	/**
-	 * A dummy fragment representing a section of the app, but that simply
-	 * displays dummy text.
-	 */
-	public static class DummySectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public DummySectionFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
-					container, false);
-			TextView dummyTextView = (TextView) rootView
-					.findViewById(R.id.section_label);
-			dummyTextView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER)));
-			return rootView;
-		}
 	}
 
 }
