@@ -1,8 +1,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     
-    <item android:id="@+id/action_add" android:title="@string/action_add" android:showAsAction="always"></item>
-    <item android:id="@+id/action_closeall" android:showAsAction="ifRoom" android:title="@string/action_closeall"></item><item android:id="@+id/action_reports" android:showAsAction="ifRoom" android:title="@string/action_reports"></item><item android:id="@+id/action_settings" android:orderInCategory="100" android:showAsAction="never" android:title="@string/action_settings" />
+    <item android:id="@+id/action_add" android:title="@string/action_add" android:showAsAction="ifRoom"></item>
+    <item android:id="@+id/action_closeall" android:showAsAction="ifRoom" android:title="@string/action_closeall"></item><item android:id="@+id/action_reports" android:showAsAction="ifRoom" android:title="@string/action_reports">
+        <menu>
+            <item android:id="@+id/reports_today" android:title="@string/reports_today"/>
+            <item android:id="@+id/reports_monththis" android:title="@string/reports_monththis"/>
+            <item android:id="@+id/reports_monthlast" android:title="@string/reports_monthlast"/>
+            <item android:id="@+id/reports_all" android:title="@string/reports_all"/>
+            <item android:id="@+id/reports_export" android:title="@string/reports_export"/>
+            </menu>
+    </item>
+    <item android:id="@+id/action_settings" android:orderInCategory="100" android:showAsAction="never" android:title="@string/action_settings" />
     
 
 </menu>

@@ -3,11 +3,15 @@
 
     <string name="app_name">TimeKeep</string>
     <string name="action_settings">Settings</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">List</string>
+    <string name="title_section2">Edit</string>
     <string name="action_add">Add</string>
     <string name="action_closeall">Close All</string>
     <string name="action_reports">Reports</string>
-
+    <string name="reports_today">Today</string>
+    <string name="reports_monththis">This month</string>
+    <string name="reports_monthlast">Last month</string>
+    <string name="reports_all">All</string>
+    <string name="reports_export">Export</string>
+    
 </resources>
