@@ -1,22 +1,13 @@
 package cc.nappy.timekeep;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
-
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.NavUtils;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
-public class MainActivity extends FragmentActivity implements
-		ActionBar.OnNavigationListener {
+public class MainActivity extends FragmentActivity  {
 
 	/**
 	 * The serialization (saved instance state) Bundle key representing the
@@ -59,4 +50,17 @@ public class MainActivity extends FragmentActivity implements
 		return true;
 	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		Intent i;
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.action_settings:
+	        	i = new Intent(this, SettingsActivity.class );
+				startActivityForResult(i, 0);
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}
 }
